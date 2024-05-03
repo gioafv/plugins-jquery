@@ -1,6 +1,7 @@
 $(document).ready(function () {
     $("#telefone").mask("(00) 00000-0000");
     $("#cpf").mask("000.000.000-00");
+    $("#cep").mask("00.000-000");
 
     $("form").validate({
         rules: {
@@ -19,6 +20,9 @@ $(document).ready(function () {
             adress: {
                 required: true,
             },
+            cep: {
+                required: true,
+            },
         },
 
         messages: {
@@ -27,6 +31,7 @@ $(document).ready(function () {
             cpf: "Por favor, insira seu CPF!",
             email: "Por favor, insira seu email!",
             adress: "Por favor, insira o seu endereço!",
+            cep: "Por favor, insira o seu CEP!",
         },
 
         submitHandler: function (form) {
